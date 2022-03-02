@@ -1,0 +1,40 @@
+<div class="forUserDetails">
+  Already a member
+  <button
+    class="btn btn-primary"
+    style="margin-left: 1rem"
+    [routerLink]="['/reactive-form']"
+    routerLinkActive="router-link-active"
+  >
+    Log in
+  </button>
+</div>
+<div>
+  <br />
+  <div style="text-align: center">
+    <label style="font-size: 30px">User Resistration using Template driven form</label>
+  </div>
+  <form #myform="ngForm" (ngSubmit)="submit(myform)" class="hightWidth center">
+    <input class="form-control mt-1rem" required type="text" [(ngModel)]="user.fullName" placeholder="Full name" name="Full_name" #full_name="ngModel" />
+    <span *ngIf="full_name.errors && full_name.errors.required" style="color: red;">This is invalid</span>
+    <br />
+    <input class="form-control mt-1rem" type="text" placeholder="Email" [(ngModel)]="user.email" name="email" #email="ngModel" required/>
+    <span *ngIf="email.errors && email.errors.required" class="forError">Email is required</span>
+    <br />
+    <input class="form-control" type="number"[(ngModel)]="user.phoneNo" #phone_number="ngModel" name="phone" placeholder="Phone No" required />
+    <span *ngIf="phone_number.errors && phone_number.errors.required" class="forError">Phone Number is required</span>
+    <br />
+    <input class="form-control" type="password" [(ngModel)]="user.password" #password="ngModel" name="pass" placeholder="Password" required/>
+    <span *ngIf="password.errors && password.errors.required" class="forError">Password is required</span>
+    <br />
+    <input
+      class="form-control" type="password" [(ngModel)]="user.password" #confirm_password="ngModel" name="cnfPass" placeholder="Confirm Password" required
+    />
+    <span *ngIf="confirm_password.errors && confirm_password.errors.required" class="forError">Must Comfirm Password</span>
+    <br />
+    <p >
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </p>
+  </form>
+</div>
+

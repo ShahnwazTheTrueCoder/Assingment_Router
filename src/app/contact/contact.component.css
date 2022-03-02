@@ -1,0 +1,9 @@
+#first-div{
+  font-size: 30px;
+}
+div{
+  display: inline-block;
+  height: 10rem;
+  width: 100%;
+  text-align: center;
+}

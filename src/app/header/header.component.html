@@ -1,0 +1,24 @@
+<div id="div_nav">
+  <label id="logo">Coding <span id="logo2"> Addict</span> </label>
+  <nav id="nav">
+    <ul>
+      <li class="nav_li nav-item" [routerLink]="['/home']" routerLinkActive="active">🏡 Home</li>
+      <li class="nav_li nav-item" [routerLink]="['/products']" routerLinkActive="active" >📱 Products</li>
+      <li class="nav_li nav-item" id="last_li" [routerLink]="['/contact']" routerLinkActive="active" >📞 Contacts</li>
+    </ul>
+  </nav>
+  <button id="btn1" (click)="TogleNav()">
+    <div class="burger"></div>
+    <div class="burger"></div>
+    <div class="burger"></div>
+  </button>
+</div>
+<div id="div_nav2" [hidden]= "showDiv">
+  <nav id="nav2">
+    <ul>
+      <li class="nav_li2 nav-item" [routerLink]="['/home']" routerLinkActive="active" >🏡 Home</li>
+      <li class="nav_li2 nav-item" [routerLink]="['/products']" routerLinkActive="active" >📱 Products</li>
+      <li class="nav_li2 nav-item" id="last_li2" [routerLink]="['/contact']" routerLinkActive="active">📞 Contacts</li>
+    </ul>
+    </nav>
+  </div>

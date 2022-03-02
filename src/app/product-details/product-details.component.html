@@ -1,0 +1,13 @@
+<div *ngFor="let item of objdtail; index as ind">
+  <div *ngIf="ind + 1 == idFromprod">
+    <div class="parentDetails">
+      <div class="fordetails" style="margin: 4rem">
+        <img [src]="item.img" alt="Image not found" width="100%" height="100%" />
+      </div>
+
+      <div class="fordetails">
+        <li  *ngFor="let itm of item.details">{{ itm }} </li>
+      </div>
+    </div>
+  </div>
+</div>

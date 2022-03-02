@@ -1,0 +1,49 @@
+<table class="table table-bordered">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">Sr. No.</th>
+      <th scope="col">Product Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Go To</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let item of objprod; index as ind">
+    <tr>
+      <th scope="row">{{ item.prodId}}</th>
+      <td>{{ item.name }}</td>
+      <td>{{ item.price | currency:'INR' }}</td>
+      <td>
+        <button
+          type="button"
+          class="btn btn-primary"
+          style="margin-left: 10px"
+          [routerLink]="['/product-details/',item.prodId]" routerLinkActive="router-link-active"
+        >
+          View
+        </button>
+      </td>
+    </tr>
+    <!-- <ng-template #showUpdate>
+      <tr>
+        <th scope="row">
+          <input type="number" [(ngModel)]="item.employeeId" />
+        </th>
+        <td><input type="text" [(ngModel)]="item.firstName" /></td>
+        <td><input type="text" [(ngModel)]="item.lastName" /></td>
+        <td><input type="number" [(ngModel)]="item.salary" /></td>
+        <td><input type="text" [(ngModel)]="item.dob" /></td>
+        <td><input type="text" [(ngModel)]="item.email" /></td>
+        <td>
+          <button
+            type="button"
+            class="btn btn-primary"
+            style="margin-left: 10px"
+            (click)="Updateemp(item)"
+          >
+            Update
+          </button>
+        </td>
+      </tr>
+    </ng-template> -->
+  </tbody>
+</table>

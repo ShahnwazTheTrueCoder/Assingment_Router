@@ -3,14 +3,33 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
+import { ProductsComponent } from './products/products.component';
+import { HeaderComponent } from './header/header.component';
+import { PageNoteFoundComponent } from './page-note-found/page-note-found.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { FormsModule } from '@angular/forms';
+import { MatSliderModule } from '@angular/material/slider';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    ContactComponent,
+    ProductsComponent,
+    HeaderComponent,
+    PageNoteFoundComponent,
+    ProductDetailsComponent,
+    ReactiveFormComponent,
+    TemplateDrivenFormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
